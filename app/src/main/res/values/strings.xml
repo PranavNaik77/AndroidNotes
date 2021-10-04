@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android Notes</string>
+    <string name="info">info</string>
+    <string name="add">add</string>
+    <string name="NotesJson">AndroidNotes.json</string>
+    <string name="_10_01_2021_dashrath_gelot">©2021, Dashrath Gelot</string>
+</resources>
