@@ -4,6 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.41559485530546625" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/drawable/notebackground.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/layout/activity_about.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/layout/activity_add_note.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/layout/notelist.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/menu/headermenu.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/naikp/Desktop/Dasrath_MAD/mobile_application/AndroidNotes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.23378378378378378" />
         <entry key="app/src/main/res/drawable/notebackground.xml" value="0.23378378378378378" />
         <entry key="app/src/main/res/drawable/notes_background.xml" value="0.23378378378378378" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.21981981981981982" />

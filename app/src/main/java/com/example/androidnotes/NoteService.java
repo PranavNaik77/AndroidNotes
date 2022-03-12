@@ -19,10 +19,6 @@ public class NoteService {
         mainActivity.saveNotes();
     }
 
-    public static void addNoteInList(Note note) {
-        notes.add(note);
-    }
-
     public static ArrayList<Note> getNotes() {
         return notes;
     }

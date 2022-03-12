@@ -17,8 +17,8 @@ import java.util.Date;
 
 public class AddNoteActivity extends AppCompatActivity {
 
-    private EditText title;
-    private EditText description;
+    private EditText notes_title;
+    private EditText notes_description;
     private Note note;
 
     @Override
@@ -26,14 +26,14 @@ public class AddNoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
 
-        title = findViewById(R.id.noteTitle);
-        description = findViewById(R.id.noteDesc);
+        notes_title = findViewById(R.id.note_Title);
+        notes_description = findViewById(R.id.note_description);
 
         note = (Note) getIntent().getSerializableExtra("note");
 
         if (note != null) {
-            title.setText(note.getTitle());
-            description.setText(note.getDescription());
+            notes_title.setText(note.getTitle());
+            notes_description.setText(note.getDescription());
         }
     }
 
@@ -44,11 +44,13 @@ public class AddNoteActivity extends AppCompatActivity {
     }
 
     private String getDate() {
-        return new SimpleDateFormat("E MMM dd, hh.mm aa ").format(new Date());
+        String updated_time = new SimpleDateFormat("E MMM dd, hh.mm aa ").format(new Date());   //getting today's date and time in string format
+        return updated_time;
     }
 
     private String getTextValue(EditText editText) {
-        return editText.getText().toString();
+        String text = editText.getText().toString();
+        return text;
     }
 
     private void showEmptyTitleAlert(Intent main) {
@@ -63,7 +65,7 @@ public class AddNoteActivity extends AppCompatActivity {
                 }).setNegativeButton("Cancel", null).show();
     }
 
-    private void saveNoteAndGoToMain(String title, String desc) {
+    private void Saving_and_Rendering_to_main(String title, String desc) {
         if (note != null) {
             if (!note.title.equals(title) || !note.description.equals(desc)) {
                 note.setTitle(title);
@@ -82,7 +84,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.save) {
 
-            String title = getTextValue(findViewById(R.id.noteTitle));
+            String title = getTextValue(findViewById(R.id.note_Title));
 
             Intent main = new Intent(this, MainActivity.class);
 
@@ -91,9 +93,9 @@ public class AddNoteActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
             }
 
-            String desc = getTextValue(findViewById(R.id.noteDesc));
+            String desc = getTextValue(findViewById(R.id.note_description));
 
-            saveNoteAndGoToMain(title, desc);
+            Saving_and_Rendering_to_main(title, desc);
             startActivity(main);
 
             return true;
@@ -102,7 +104,7 @@ public class AddNoteActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private boolean isNoteEdited(String title, String desc) {
+    private boolean isEdited(String title, String desc) {
 
         if (note == null) {
             return !title.isEmpty() || !desc.isEmpty();
@@ -111,28 +113,26 @@ public class AddNoteActivity extends AppCompatActivity {
         return !title.equals(note.title) || !desc.equals(note.description);
     }
 
-    private void showHelper() {
-        Toast.makeText(this, "Please enter Note title", Toast.LENGTH_SHORT).show();
-    }
+
 
     @Override
     public void onBackPressed() {
         Intent main = new Intent(this, MainActivity.class);
 
-        String title = getTextValue(findViewById(R.id.noteTitle));
-        String desc = getTextValue(findViewById(R.id.noteDesc));
+        String title = getTextValue(findViewById(R.id.note_Title));
+        String desc = getTextValue(findViewById(R.id.note_description));
 
-        if (isNoteEdited(title, desc)) {
+        if (isEdited(title, desc)) {
             new AlertDialog.Builder(this)
                     .setTitle("Save note ?")
-                    .setMessage("Your note is not saved, save note `" + getTextValue(findViewById(R.id.noteTitle)) + "` ?")
+                    .setMessage("Your note is not saved, save note `" + getTextValue(findViewById(R.id.note_Title)) + "` ?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             if (title.isEmpty()) {
-                                showHelper();
+                                Toast.makeText(AddNoteActivity.this, "Please enter Note title", Toast.LENGTH_SHORT).show();
                             } else {
-                                saveNoteAndGoToMain(title, desc);
+                                Saving_and_Rendering_to_main(title, desc);
                                 startActivity(main);
                             }
                         }

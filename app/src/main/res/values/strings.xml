@@ -2,6 +2,6 @@
     <string name="app_name">Android Notes</string>
     <string name="info">info</string>
     <string name="add">add</string>
-    <string name="NotesJson">AndroidNotes.json</string>
-    <string name="_10_01_2021_dashrath_gelot">©2021, Dashrath Gelot</string>
+    <string name="JsonNotes">AndroidNotes.json</string>
+    <string name="_02_20_2022_pranav_naik">©2022, Pranav Naik</string>
 </resources>

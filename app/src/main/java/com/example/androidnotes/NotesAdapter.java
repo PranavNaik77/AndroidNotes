@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.ViewHolder> {
+public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
 
     private List<Note> notes;
     private MainActivity mainActivity;
 
-    public NotesRecyclerViewAdapter(List<Note> notes, MainActivity mainActivity) {
+    public NotesAdapter(List<Note> notes, MainActivity mainActivity) {
         this.notes = notes;
         this.mainActivity = mainActivity;
     }
@@ -43,7 +43,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull NotesRecyclerViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NotesAdapter.ViewHolder holder, int position) {
         Log.d("helper", "in BindVeiwHolder()");
 
         Note note = notes.get(position);
